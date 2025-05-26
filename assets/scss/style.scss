@@ -383,6 +383,63 @@ button, input, textarea, li, div {
 }
 // Home end
 
+// products
+.products {
+    margin: 24px 0;
+
+    h3 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $color-primary;
+        margin-bottom: 24px;
+
+        @include media(1200) {
+            font-size: 40px;
+        }
+
+        @include media(993) {
+            font-size: 32px;
+        }
+    }
+
+    &_cards {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 24px;
+
+        @include media(1150) {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    &_card {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+        border: 1px solid $color-optional-1;
+        background: $color-light;
+
+        @include media(1150) {
+            box-shadow: 4px 4px 4px 0px #00000040;
+            gap: 0;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 150%;
+            color: $color-primary;
+
+            @include media(993) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+// products
+
 // article
 .article {
     margin-bottom: 24px;
