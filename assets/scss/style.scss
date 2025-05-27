@@ -93,59 +93,6 @@ button, input, textarea, li, div {
     }
 }
 
-.tabs {
-    margin-top: 48px;
-
-    @include media(1170) {
-        margin-top: 24px;
-    }
-
-    .tab-buttons {
-        display: flex;
-        gap: 24px;
-        margin-bottom: 24px;
-
-        @include media(1170) {
-            margin-bottom: 16px;
-            overflow-x: scroll;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
-        }
-
-        .tab-btn {
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 150%;
-            color: $color-primary;
-            width: max-content;
-            transition: background-color 0.3s;
-
-            @include media(993) {
-                font-size: 24px;
-                white-space: nowrap;
-            }
-
-            &.active {
-                color: $color-accent-2;
-            }
-
-            &:hover {
-                color: $color-accent-2;
-            }
-        }
-    }
-
-    .tab-content {
-        display: none;
-
-        &.active {
-            display: block;
-        }
-    }
-}
-
 .top_link {
     position: fixed;
     bottom: 24px;
@@ -409,6 +356,53 @@ button, input, textarea, li, div {
             @include media(-1150) {
                 display: none;
             }
+        }
+    }
+}
+
+.header_two {
+    position: static;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    background: $color-light;
+
+    .header-navs {
+        a {
+            color: $color-primary;
+        }
+    }
+
+    .header-right {
+        a {
+            color: $color-primary;
+        }
+
+        .line {
+            background: $color-primary;
+        }
+    }
+}
+
+.page_links {
+    padding: 16px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $color-primary;
+
+        &.active {
+            color: $color-accent-2;
+        }
+
+        &:hover {
+            color: $color-accent-2;
         }
     }
 }
@@ -791,6 +785,59 @@ button, input, textarea, li, div {
             }
         }
     }
+
+    .tabs {
+    margin-top: 48px;
+
+    @include media(1170) {
+        margin-top: 24px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        @include media(1170) {
+            margin-bottom: 16px;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .tab-btn {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 150%;
+            color: $color-primary;
+            width: max-content;
+            transition: background-color 0.3s;
+
+            @include media(993) {
+                font-size: 24px;
+                white-space: nowrap;
+            }
+
+            &.active {
+                color: $color-accent-2;
+            }
+
+            &:hover {
+                color: $color-accent-2;
+            }
+        }
+    }
+
+    .tab-content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
 }
 // about
 
@@ -1287,6 +1334,327 @@ button, input, textarea, li, div {
     }
 }
 // contact
+
+// system
+.system {
+    padding: 48px 0 96px 0;
+    background: $color-optional-1;
+
+    @include media(1200) {
+        padding: 24px 0;
+    }
+
+    h3 {
+        margin-bottom: 48px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $color-primary;
+
+        @include media(1200) {
+            margin-bottom: 24px;
+            font-size: 40px;
+        }
+
+        @include media(993) {
+            font-size: 32px;
+        }
+    }
+
+    &_cards {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 24px;
+
+        @include media(1200) {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include media(650) {
+            display: none;
+        }
+    }
+
+    &_card {
+        border-radius: 12px;
+        padding: 24px;
+        background: $color-light;
+        min-height: 352px;
+
+        @include media(1200) {
+            min-height: 280px;
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        h6 {
+            margin: 24px 0 12px 0;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 150%;
+            color: $color-primary;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-primary;
+        }
+    }
+
+    .systemSwiper {
+        display: none;
+
+        @include media(650) {
+            display: block;
+        }
+
+        .system-pagination {
+            margin-bottom: 24px;
+            position: static;
+            height: 2px;
+            background: $color-light;
+
+            .swiper-pagination-progressbar-fill {
+                height: 2px;
+                background: $color-accent-2;
+            }
+        }
+
+        .swiper-slide {
+            height: auto;
+
+            .system_card {
+                height: 100%;
+            }
+        }
+    }
+
+}
+// system
+
+// services
+.services {
+    padding: 48px 0;
+
+    @include media(1200) {
+        padding: 24px 0;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $color-primary;
+        margin-bottom: 12px;
+
+        @include media(1200) {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: $color-primary;
+        max-width: 992px;
+
+        @include media(1200) {
+            font-size: 24px;
+        }
+    }
+
+    &_title {
+        margin-bottom: 48px;
+
+        @include media(1200) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &_blocks {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 48px;
+
+        @include media(1200) {
+            gap: 24px;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include media(576) {
+            gap: 24px;
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    &_block {
+        img {
+            width: 120px;
+            height: 120px;
+
+            @include media(1200) {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 150%;
+            color: $color-primary;
+            max-width: 100%;
+            margin-top: 24px;
+
+            @include media(1200) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+// services
+
+// information
+.information {
+    padding: 48px 0;
+
+    @include media(1200) {
+        padding: 24px 0;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        margin-bottom: 48px;
+        color: $color-primary;
+
+        @include media(1200) {
+            margin-bottom: 24px;
+            font-size: 40px;
+        }
+
+        @include media(993) {
+            font-size: 32px;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+
+        @include media(1200) {
+            gap: 24px;
+        }
+
+        @include media(993) {
+            flex-direction: column;
+        }
+
+        .tab-buttons {
+            width: 468px;
+            display: flex;
+            align-items: end;
+            gap: 48px;
+            flex-direction: column;
+
+            @include media(1200) {
+                width: 378px;
+                gap: 24px;
+            }
+
+            @include media(993) {
+                width: 286px;
+                gap: 12px;
+            }
+
+            .tab-btn {
+                text-align: right;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 150%;
+                color: $color-dark-25;
+                width: max-content;
+                transition: background-color 0.3s;
+                padding-left: 120px;
+                position: relative;
+
+                @include media(993) {
+                    padding-left: 72px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 48px;
+                    top: 0;
+                    bottom: 0;
+                    background: $color-optional-1;
+                    height: 2px;
+                    width: 48px;
+                    margin: auto;
+                    transition: .2s ease;
+
+                    @include media(993) {
+                        width: 24px;
+                        left: 24px;
+                    }
+                }
+
+                @include media(1200) {
+                    font-size: 24px;
+                    white-space: nowrap;
+                }
+
+                &.active {
+                    color: $color-accent-2;
+
+                    &::after {
+                        background: $color-accent-2;
+                        width: 96px;
+                        left: 0;
+
+                        @include media(993) {
+                            width: 48px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    color: $color-accent-2;
+                }
+            }
+        }
+
+        .tab-content {
+            display: none;
+            max-width: 984px;
+
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                color: $color-primary;
+
+                @include media(993) {
+                    font-size: 18px;
+                }
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+// information
 
 // Footer
 .footer {

@@ -73,6 +73,20 @@ const swiper3 = new Swiper('.brandSwiper', {
     },
 });
 
+var swiper4 = new Swiper(".systemSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+        el: ".system-pagination",
+        type: "progressbar",
+    },
+    breakpoints: {
+        520: {
+            slidesPerView: 2,
+        },
+    },
+});
+
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
