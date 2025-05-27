@@ -151,6 +151,71 @@ button, input, textarea, li, div {
   background: #E30613;
 }
 
+.tabs {
+  margin-top: 48px;
+}
+@media screen and (max-width: 1170px) {
+  .tabs {
+    margin-top: 24px;
+  }
+}
+.tabs .tab-buttons {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1170px) {
+  .tabs .tab-buttons {
+    margin-bottom: 16px;
+    overflow-x: scroll;
+  }
+  .tabs .tab-buttons::-webkit-scrollbar {
+    display: none;
+  }
+}
+.tabs .tab-buttons .tab-btn {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  color: #535353;
+  width: -moz-max-content;
+  width: max-content;
+  transition: background-color 0.3s;
+}
+@media screen and (max-width: 993px) {
+  .tabs .tab-buttons .tab-btn {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+}
+.tabs .tab-buttons .tab-btn.active {
+  color: #E30613;
+}
+.tabs .tab-buttons .tab-btn:hover {
+  color: #E30613;
+}
+.tabs .tab-content {
+  display: none;
+}
+.tabs .tab-content.active {
+  display: block;
+}
+
+.top_link {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: #E30613;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -527,6 +592,154 @@ button, input, textarea, li, div {
 }
 .products .products-pagination .swiper-pagination-bullet-active {
   background: #E30613;
+}
+
+.about {
+  border-bottom: 1px solid #F2F2F2;
+}
+.about_in {
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+}
+.about h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #535353;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1200px) {
+  .about h3 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .about h3 {
+    font-size: 32px;
+  }
+}
+.about p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #535353;
+}
+@media screen and (max-width: 993px) {
+  .about p {
+    font-size: 20px;
+  }
+}
+.about .container {
+  display: flex;
+  gap: 24px;
+}
+@media screen and (max-width: 1170px) {
+  .about .container {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.about_text {
+  padding: 48px 0;
+  margin-right: 584px;
+  max-width: 992px;
+}
+@media screen and (max-width: 1750px) {
+  .about_text {
+    margin-right: 700px;
+  }
+}
+@media screen and (max-width: 1430px) {
+  .about_text {
+    margin-right: 450px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .about_text {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .about_text {
+    width: 100%;
+    padding: 24px 0;
+  }
+}
+.about_document {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 694px;
+  height: 100%;
+  flex-shrink: 0;
+  padding: 48px 24px;
+  background-image: url("../images/about_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 1430px) {
+  .about_document {
+    width: 424px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .about_document {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .about_document {
+    position: static;
+    height: 394px;
+    width: 100%;
+  }
+}
+.about_document h3 {
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+.about_document ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.about_document ul a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 993px) {
+  .about_document ul a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .about_document ul a img {
+    width: 24px;
+    height: 30px;
+    display: flex;
+    flex-shrink: 0;
+  }
+}
+.about_document .logo {
+  position: absolute;
+  bottom: 0;
+  right: 24px;
+  width: 208px;
+  height: 192px;
+}
+@media screen and (max-width: 993px) {
+  .about_document .logo {
+    position: static;
+    width: 85px;
+    height: 78px;
+    margin-top: 48px;
+  }
 }
 
 .statistic {

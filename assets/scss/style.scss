@@ -93,6 +93,74 @@ button, input, textarea, li, div {
     }
 }
 
+.tabs {
+    margin-top: 48px;
+
+    @include media(1170) {
+        margin-top: 24px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        @include media(1170) {
+            margin-bottom: 16px;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .tab-btn {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 150%;
+            color: $color-primary;
+            width: max-content;
+            transition: background-color 0.3s;
+
+            @include media(993) {
+                font-size: 24px;
+                white-space: nowrap;
+            }
+
+            &.active {
+                color: $color-accent-2;
+            }
+
+            &:hover {
+                color: $color-accent-2;
+            }
+        }
+    }
+
+    .tab-content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.top_link {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: $color-accent-2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    box-shadow: 4px 4px 4px 0px #00000040;
+}
+
 // Header
 .header {
     position: absolute;
@@ -484,6 +552,154 @@ button, input, textarea, li, div {
     }
 }
 // products
+
+// about
+.about {
+    border-bottom: 1px solid $color-optional-1;
+
+    &_in {
+        max-width: 1920px;
+        margin: auto;
+        position: relative;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $color-primary;
+        margin-bottom: 24px;
+
+        @include media(1200) {
+            font-size: 40px;
+        }
+
+        @include media(993) {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: $color-primary;
+
+        @include media(993) {
+            font-size: 20px;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 24px;
+
+        @include media(1170) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    &_text {
+        padding: 48px 0;
+        margin-right: 584px;
+        max-width: 992px;
+
+        @include media(1750) {
+            margin-right: 700px;
+        }
+
+        @include media(1430) {
+            margin-right: 450px;
+        }
+
+        @include media(1200) {
+            padding: 24px;
+        }
+
+        @include media(1170) {
+            width: 100%;
+            padding: 24px 0;
+        }
+    }
+
+    &_document {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 694px;
+        height: 100%;
+        flex-shrink: 0;
+        padding: 48px 24px;
+        background-image: url('../images/about_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include media(1430) {
+            width: 424px;
+        }
+
+        @include media(1200) {
+            padding: 24px;
+        }
+
+        @include media(1170) {
+            position: static;
+            height: 394px;
+            width: 100%;
+        }
+
+        h3 {
+            color: $color-light;
+            margin-bottom: 24px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                color: $color-light;
+
+                @include media(993) {
+                    font-size: 20px;
+                }
+
+                img {
+                    @include media(993) {
+                        width: 24px;
+                        height: 30px;
+                        display: flex;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            position: absolute;
+            bottom: 0;
+            right: 24px;
+            width: 208px;
+            height: 192px;
+
+            @include media(993) {
+                position: static;
+                width: 85px;
+                height: 78px;
+                margin-top: 48px;
+            }
+        }
+    }
+}
+// about
 
 // statistic
 .statistic {
