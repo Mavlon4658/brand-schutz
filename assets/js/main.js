@@ -24,4 +24,39 @@ const homeSwp = new Swiper('.home-swp .swiper', {
         el: '.home .swp-pagination',
         clickable: true,
     }
-})
+});
+
+const swiper2 = new Swiper('.swiperProducts', {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    pagination: {
+        el: '.products-pagination',
+        clickable: true,
+    }
+});
+
+const swiper3 = new Swiper('.brandSwiper', {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    loop: true,
+    speed: 3000,
+    freeMode: true,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        740: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        990: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+        },
+        1250: {
+            slidesPerView: 8,
+            spaceBetween: 48,
+        },
+    },
+});
