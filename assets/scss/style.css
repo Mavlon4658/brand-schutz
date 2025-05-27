@@ -1108,6 +1108,17 @@ button, input, textarea, li, div {
     font-size: 24px;
   }
 }
+.article_card_in h4 span {
+  display: block;
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 400;
+}
+@media screen and (max-width: 993px) {
+  .article_card_in h4 span {
+    margin-top: 0;
+  }
+}
 
 .contact {
   background: #F2F2F2;

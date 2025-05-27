@@ -1098,6 +1098,17 @@ button, input, textarea, li, div {
                 @include media(1200) {
                     font-size: 24px;
                 }
+
+                span {
+                    display: block;
+                    margin-top: 16px;
+                    font-size: 24px;
+                    font-weight: 400;
+
+                    @include media(993) {
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }
@@ -1433,7 +1444,6 @@ button, input, textarea, li, div {
             }
         }
     }
-
 }
 // system
 
