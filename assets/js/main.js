@@ -16,6 +16,18 @@ if (phoneInp.length) {
     });
 }
 
+let bars = document.querySelector('.bars');
+let menu = document.querySelector('.menu');
+let menuClose = document.querySelector('.menu_close');
+
+bars.addEventListener('click', () => {
+    menu.classList.add('active')
+});
+
+menuClose.addEventListener('click', () => {
+    menu.classList.remove('active')
+});
+
 const homeSwp = new Swiper('.home-swp .swiper', {
     slidesPerView: 1,
     effect: 'fade',
