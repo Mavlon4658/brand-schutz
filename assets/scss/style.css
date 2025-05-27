@@ -349,6 +349,11 @@ button, input, textarea, li, div {
     justify-content: space-between;
   }
 }
+@media screen and (max-width: 993px) {
+  .home-container {
+    min-height: 600px;
+  }
+}
 .home h1 {
   font-weight: 700;
   font-size: 48px;
@@ -524,6 +529,135 @@ button, input, textarea, li, div {
   background: #E30613;
 }
 
+.statistic {
+  padding: 48px 0;
+}
+@media screen and (max-width: 1200px) {
+  .statistic {
+    padding: 24px 0;
+  }
+}
+.statistic_blocks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media screen and (max-width: 1200px) {
+  .statistic_blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.statistic_blocks span {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 150%;
+  color: #E30613;
+}
+@media screen and (max-width: 1200px) {
+  .statistic_blocks span {
+    font-size: 48px;
+  }
+}
+.statistic_blocks p {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  color: #535353;
+}
+@media screen and (max-width: 1200px) {
+  .statistic_blocks p {
+    font-size: 28px;
+  }
+}
+
+.maps {
+  height: 640px;
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .maps {
+    height: 484px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .maps {
+    height: 540px;
+  }
+}
+.maps iframe {
+  position: relative;
+  z-index: 2;
+}
+.maps .container {
+  padding: 78px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .maps .container {
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+  }
+}
+.maps h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #535353;
+  position: relative;
+  z-index: 3;
+}
+@media screen and (max-width: 1200px) {
+  .maps h3 {
+    padding: 24px;
+    font-size: 40px;
+  }
+}
+.maps_block {
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+@media screen and (max-width: 993px) {
+  .maps_block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: end;
+  }
+}
+.maps .article_card {
+  width: 484px;
+}
+@media screen and (max-width: 1200px) {
+  .maps .article_card {
+    width: 424px;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 993px) {
+  .maps .article_card {
+    height: 240px;
+    width: 100%;
+  }
+}
+.maps .article_card h4 span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+}
+
 .brand {
   padding: 48px 0;
   border-bottom: 1px solid #F5F5F5;
@@ -581,6 +715,11 @@ button, input, textarea, li, div {
 @media screen and (max-width: 1200px) {
   .article_card {
     height: 362px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .article_card {
+    height: 312px;
   }
 }
 .article_card::before {

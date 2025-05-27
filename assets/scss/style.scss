@@ -306,6 +306,10 @@ button, input, textarea, li, div {
             flex-direction: column;
             justify-content: space-between;
         }
+
+        @include media(993) {
+            min-height: 600px;
+        }
     }
 
     h1 {
@@ -481,6 +485,139 @@ button, input, textarea, li, div {
 }
 // products
 
+// statistic
+.statistic {
+    padding: 48px 0;
+
+    @include media(1200) {
+        padding: 24px 0;
+    }
+
+    &_blocks {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 24px;
+
+        @include media(1200) {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 150%;
+            color: $color-accent-2;
+
+            @include media(1200) {
+                font-size: 48px;
+            }
+        }
+
+        p {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 150%;
+            color: $color-primary;
+
+            @include media(1200) {
+                font-size: 28px;
+            }
+        }
+    }
+}
+// statistic
+
+// maps
+.maps {
+    height: 640px;
+    position: relative;
+
+    @include media(1200) {
+        height: 484px;
+    }
+
+    @include media(993) {
+        height: 540px;
+    }
+
+    iframe {
+        position: relative;
+        z-index: 2;
+    }
+
+    .container {
+        padding: 78px 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        @include media(1200) {
+            padding: 0;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $color-primary;
+        position: relative;
+        z-index: 3;
+
+        @include media(1200) {
+            padding: 24px;
+            font-size: 40px;
+        }
+    }
+
+    &_block {
+        height: 100%;
+        position: relative;
+        z-index: 3;
+
+        @include media(993) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: end;
+        }
+    }
+
+    .article_card {
+        width: 484px;
+
+        @include media(1200) {
+            width: 424px;
+            height: 100%;
+        }
+
+        @include media(993) {
+            height: 240px;
+            width: 100%;
+        }
+
+        h4 {
+            span {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+            }
+        }
+    }
+}
+// maps
+
 // brand
 .brand {
     padding: 48px 0;
@@ -540,6 +677,10 @@ button, input, textarea, li, div {
 
         @include media(1200) {
             height: 362px;
+        }
+
+        @include media(993) {
+            height: 312px;
         }
 
         &::before {
