@@ -1478,6 +1478,286 @@ button, input, textarea, li, div {
 }
 // system
 
+// concentrations
+.concentrations {
+    padding: 48px 0;
+
+    @include media(1200) {
+        padding: 24px 0;
+    }
+
+    h3 {
+        margin-bottom: 48px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $color-primary;
+
+        @include media(1200) {
+            margin-bottom: 24px;
+            font-size: 40px;
+        }
+
+        @include media(993) {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: $color-primary;
+        margin-bottom: 48px;
+
+        @include media(1200) {
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &_model {
+        display: flex;
+        align-items: start;
+        gap: 48px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color-optional-1;
+
+        h6 {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 150%;
+            color: $color-primary;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 150%;
+            color: $color-primary;
+            margin: 0;
+        }
+
+        &_blocks {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-top: 24px;
+
+            h6 {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+                color: $color-primary;
+            }
+        }
+
+        &_block {
+            width: 88px;
+        }
+
+        &_head {
+            width: 128px;
+            flex-shrink: 0;
+        }
+    }
+
+    &_table {
+        display: flex;
+        align-items: start;
+        gap: 48px;
+        padding: 24px 0;
+        border-bottom: 1px solid $color-optional-1;
+
+        &_head {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 128px;
+            flex-shrink: 0;
+
+            h6 {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+                color: $color-primary;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 160%;
+                color: $color-light;
+                padding: 2px 8px;
+                background: $color-accent-2;
+                border-radius: 5px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: $color-primary;
+                margin: 0;
+            }
+        }
+
+        &_in {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            h6 {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 150%;
+                color: $color-primary;
+            }
+        }
+
+        &_block {
+            width: 88px;
+        }
+    }
+}
+// concentrations
+
+// system_structure
+.system_structure {
+    padding: 48px 0;
+
+    @include media(1200) {
+        padding: 24px 0;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 150%;
+        color: $color-primary;
+        margin-bottom: 48px;
+
+        @include media(1200) {
+            margin-bottom: 24px;
+            font-size: 40px;
+        }
+
+        @include media(993) {
+            font-size: 32px;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+
+        @include media(1200) {
+            gap: 24px;
+        }
+
+        @include media(993) {
+            flex-direction: column;
+        }
+
+        .tab-buttons {
+            width: 410px;
+            display: flex;
+            align-items: end;
+            gap: 48px;
+            flex-direction: column;
+
+            @include media(1200) {
+                width: 378px;
+                gap: 24px;
+            }
+
+            @include media(993) {
+                width: 286px;
+            }
+
+            .tab-btn {
+                text-align: right;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 150%;
+                color: $color-dark-25;
+                width: max-content;
+                transition: background-color 0.3s;
+                padding-left: 120px;
+                position: relative;
+
+                @include media(993) {
+                    padding-left: 72px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 48px;
+                    top: 0;
+                    bottom: 0;
+                    background: $color-optional-1;
+                    height: 2px;
+                    width: 48px;
+                    margin: auto;
+                    transition: .2s ease;
+
+                    @include media(993) {
+                        width: 24px;
+                        left: 24px;
+                    }
+                }
+
+                @include media(1200) {
+                    font-size: 24px;
+                    white-space: nowrap;
+                }
+
+                &.active {
+                    color: $color-accent-2;
+
+                    &::after {
+                        background: $color-accent-2;
+                        width: 96px;
+                        left: 0;
+
+                        @include media(993) {
+                            width: 48px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    color: $color-accent-2;
+                }
+
+                p {
+                    max-width: 348px;
+                    white-space: wrap;
+                    text-align: left;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 150%;
+                    letter-spacing: 0%;
+
+                }
+            }
+        }
+
+        .tab-content {
+            display: none;
+            max-width: 984px;
+
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+// system_structure
+
 // objects
 .objects {
     padding: 48px 0;
