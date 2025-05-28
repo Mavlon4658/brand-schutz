@@ -1463,6 +1463,69 @@ button, input, textarea, li, div {
   height: 100%;
 }
 
+.objects {
+  padding: 48px 0;
+}
+@media screen and (max-width: 1200px) {
+  .objects {
+    padding: 24px 0;
+  }
+}
+.objects h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #535353;
+  margin-bottom: 48px;
+}
+@media screen and (max-width: 1200px) {
+  .objects h3 {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .objects h3 {
+    font-size: 32px;
+  }
+}
+.objects .objectsProducts .swiper-slide {
+  height: auto;
+}
+.objects .objectsProducts .objects-pagination {
+  margin-bottom: 24px;
+  position: static;
+  height: 2px;
+  background: #FFFFFF;
+}
+.objects .objectsProducts .objects-pagination .swiper-pagination-progressbar-fill {
+  height: 2px;
+  background: #E30613;
+}
+.objects_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 24px;
+  height: 100%;
+  border: 1px solid #F2F2F2;
+}
+.objects_card img {
+  width: 100%;
+}
+.objects_card span {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  color: #535353;
+}
+@media screen and (max-width: 1200px) {
+  .objects_card span {
+    font-size: 24px;
+  }
+}
+
 .services {
   padding: 48px 0;
 }
@@ -2176,6 +2239,104 @@ button, input, textarea, li, div {
 .specifications_text {
   position: relative;
   z-index: 2;
+}
+
+.project_home {
+  background-image: url("../images/project_home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px;
+  position: relative;
+  background-position: center;
+}
+@media screen and (max-width: 1200px) {
+  .project_home {
+    height: 295px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .project_home {
+    height: 360px;
+  }
+}
+.project_home::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 29, 27, 0.8);
+}
+.project_home .container {
+  position: relative;
+  z-index: 3;
+  padding: 48px 0;
+  height: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .project_home .container {
+    padding: 24px 0;
+  }
+}
+.project_home h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .project_home h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .project_home h1 {
+    font-size: 32px;
+  }
+}
+.project_home span {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1200px) {
+  .project_home span {
+    font-size: 24px;
+  }
+}
+.project_home_btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5019607843);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project_home_btn svg {
+  transform: translateX(2px);
+}
+@media screen and (max-width: 993px) {
+  .project_home_btn svg {
+    width: 12px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .project_home_btn {
+    width: 48px;
+    height: 48px;
+    transform: none;
+    left: 0;
+    top: auto;
+    bottom: 24px;
+  }
 }
 
 .footer {

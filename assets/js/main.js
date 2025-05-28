@@ -87,6 +87,25 @@ var swiper4 = new Swiper(".systemSwiper", {
     },
 });
 
+var swiper6 = new Swiper(".objectsProducts", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    pagination: {
+        el: ".objects-pagination",
+        type: "progressbar",
+    },
+    breakpoints: {
+        650: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+        },
+        993: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+        },
+    },
+});
+
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
