@@ -470,6 +470,82 @@ button, input, textarea, li, div {
   transform: translateY(0);
 }
 
+.video_modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(50, 51, 52);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  padding: 48px;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.video_modal iframe {
+  border-radius: 12px;
+  transform: translateY(100px);
+  transition: transform 0.3s ease;
+}
+.video_modal_close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+.video_modal_play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5019607843);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+  z-index: 5;
+}
+.video_modal_play:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #E30613;
+}
+.video_modal_play:hover svg path {
+  fill: #FFFFFF;
+}
+.video_modal_play svg {
+  transform: translateX(2px);
+}
+.video_modal_play svg path {
+  transition: 0.2s ease;
+}
+@media screen and (max-width: 993px) {
+  .video_modal_play svg {
+    width: 12px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .video_modal_play {
+    width: 48px;
+    height: 48px;
+    transform: none;
+    left: 0;
+    top: auto;
+    bottom: 24px;
+  }
+}
+.video_modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+.video_modal.active iframe {
+  transform: translateY(0);
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -1802,6 +1878,36 @@ button, input, textarea, li, div {
     margin-bottom: 24px;
   }
 }
+.concentrations_scrolls {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.concentrations_scrolls::-webkit-scrollbar {
+  padding: 0;
+  display: none;
+  height: 2px;
+  background: #F2F2F2;
+  overflow: hidden;
+}
+@media screen and (max-width: 1520px) {
+  .concentrations_scrolls::-webkit-scrollbar {
+    display: block;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .concentrations_scrolls::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .concentrations_scrolls::-webkit-scrollbar {
+    display: block;
+  }
+}
+.concentrations_scrolls::-webkit-scrollbar-thumb {
+  background: #E30613;
+  height: 2px;
+}
 .concentrations_model {
   display: flex;
   align-items: start;
@@ -1809,11 +1915,21 @@ button, input, textarea, li, div {
   padding-bottom: 24px;
   border-bottom: 1px solid #F2F2F2;
 }
+@media screen and (max-width: 650px) {
+  .concentrations_model {
+    gap: 24px;
+  }
+}
 .concentrations_model h6 {
   font-weight: 700;
   font-size: 28px;
   line-height: 150%;
   color: #535353;
+}
+@media screen and (max-width: 993px) {
+  .concentrations_model h6 {
+    font-size: 24px;
+  }
 }
 .concentrations_model p {
   font-weight: 400;
@@ -1821,6 +1937,11 @@ button, input, textarea, li, div {
   line-height: 150%;
   color: #535353;
   margin: 0;
+}
+@media screen and (max-width: 993px) {
+  .concentrations_model p {
+    font-size: 16px;
+  }
 }
 .concentrations_model_blocks {
   display: flex;
@@ -1837,6 +1958,11 @@ button, input, textarea, li, div {
 .concentrations_model_block {
   width: 88px;
 }
+@media screen and (max-width: 1200px) {
+  .concentrations_model_block {
+    width: 57px;
+  }
+}
 .concentrations_model_head {
   width: 128px;
   flex-shrink: 0;
@@ -1847,6 +1973,11 @@ button, input, textarea, li, div {
   gap: 48px;
   padding: 24px 0;
   border-bottom: 1px solid #F2F2F2;
+}
+@media screen and (max-width: 650px) {
+  .concentrations_table {
+    gap: 24px;
+  }
 }
 .concentrations_table_head {
   display: flex;
@@ -1890,6 +2021,11 @@ button, input, textarea, li, div {
 }
 .concentrations_table_block {
   width: 88px;
+}
+@media screen and (max-width: 1200px) {
+  .concentrations_table_block {
+    width: 57px;
+  }
 }
 
 .system_structure {
@@ -2058,7 +2194,7 @@ button, input, textarea, li, div {
   margin-bottom: 24px;
   position: static;
   height: 2px;
-  background: #FFFFFF;
+  background: #F2F2F2;
 }
 .objects .objectsProducts .objects-pagination .swiper-pagination-progressbar-fill {
   height: 2px;

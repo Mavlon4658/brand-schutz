@@ -106,6 +106,19 @@ var swiper6 = new Swiper(".objectsProducts", {
     },
 });
 
+let videoModalBtn = document.querySelector('.project_home_btn');
+let videoModal = document.querySelector('.video_modal');
+let videoModalClose = document.querySelector('.video_modal_close');
+
+videoModalBtn.addEventListener('click', () => {
+    videoModal.classList.add('active');
+});
+
+videoModalClose.addEventListener('click', () => {
+    videoModal.classList.remove('active');
+});
+
+
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
