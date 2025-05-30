@@ -88,7 +88,7 @@ var swiper4 = new Swiper(".systemSwiper", {
 });
 
 var swiper6 = new Swiper(".objectsProducts", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 24,
     pagination: {
         el: ".objects-pagination",
@@ -141,4 +141,33 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.remove("modal-open");
         }
     });
+});
+
+var swiper = new Swiper(".reportSwiper", {
+    spaceBetween: 24,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        650: {
+            slidesPerView: 5,
+        },
+        1200: {
+            slidesPerView: 9,
+        },
+    },
+});
+var swiper5 = new Swiper(".reportSwiper2", {
+    spaceBetween: 28,
+    navigation: {
+    nextEl: ".report-button-next",
+    prevEl: ".report-button-prev",
+    },
+    thumbs: {
+    swiper: swiper,
+    },
+    pagination: {
+        el: ".report-pagination",
+        type: "progressbar",
+    },
 });
