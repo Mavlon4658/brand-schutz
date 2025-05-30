@@ -88,7 +88,7 @@ var swiper4 = new Swiper(".systemSwiper", {
 });
 
 var swiper6 = new Swiper(".objectsProducts", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 24,
     pagination: {
         el: ".objects-pagination",
@@ -145,10 +145,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 var swiper = new Swiper(".reportSwiper", {
     spaceBetween: 24,
-    slidesPerView: 3,
+    slidesPerView: 2,
     freeMode: true,
     watchSlidesProgress: true,
     breakpoints: {
+        350: {
+            slidesPerView: 3,
+        },
         650: {
             slidesPerView: 5,
         },
