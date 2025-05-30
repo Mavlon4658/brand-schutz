@@ -120,3 +120,25 @@ tabButtons.forEach(btn => {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("globalModal");
+    const openButtons = document.querySelectorAll(".feedback_btn");
+    const closeButton = modal.querySelector(".feedback_close");
+
+    openButtons.forEach(button => {
+        button.addEventListener("click", () => {
+        modal.classList.add("modal-open");
+        });
+    });
+
+    closeButton.addEventListener("click", () => {
+        modal.classList.remove("modal-open");
+    });
+
+    modal.addEventListener("click", e => {
+        if (e.target === modal) {
+        modal.classList.remove("modal-open");
+        }
+    });
+});
