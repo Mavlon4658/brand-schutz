@@ -16,6 +16,25 @@ if (phoneInp.length) {
     });
 }
 
+const tabBtnBlocks = document.querySelectorAll('.tab_btn_block');
+
+tabBtnBlocks.forEach(block => {
+    const btn = block.querySelector('.tab-btn');
+    const text = block.querySelector('.tab_btn_text');
+
+    btn.addEventListener('click', () => {
+        tabBtnBlocks.forEach(b => {
+        b.querySelector('.tab-btn').classList.remove('active');
+        b.querySelector('.tab_btn_text').classList.remove('active');
+        });
+
+        btn.classList.add('active');
+        text.classList.add('active');
+    });
+});
+
+
+
 let bars = document.querySelector('.bars');
 let menu = document.querySelector('.menu');
 let menuClose = document.querySelector('.menu_close');
@@ -106,18 +125,21 @@ var swiper6 = new Swiper(".objectsProducts", {
     },
 });
 
-let videoModalBtn = document.querySelector('.project_home_btn');
+let videoModalBtns = document.querySelectorAll('.project_home_btn');
 let videoModal = document.querySelector('.video_modal');
 let videoModalClose = document.querySelector('.video_modal_close');
 
-videoModalBtn.addEventListener('click', () => {
-    videoModal.classList.add('active');
-});
+if (videoModal && videoModalClose) {
+    videoModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            videoModal.classList.add('active');
+        });
+    });
 
-videoModalClose.addEventListener('click', () => {
-    videoModal.classList.remove('active');
-});
-
+    videoModalClose.addEventListener('click', () => {
+        videoModal.classList.remove('active');
+    });
+}
 
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
